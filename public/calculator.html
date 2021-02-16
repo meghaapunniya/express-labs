@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- script files -->
+    <script src="finance.js"></script>
+    <script src="display.js"></script>
+
+    <title>Financial Calculators</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="main" style="text-align: center;">SchoolofCS.org</h1>
+        <h2>Financial Calculator</h2>
+        <br>
+        <div class="row">
+            <select class=form-select aria-label="Default select example"
+                style="width: 200px;background-color: grey;color:honeydew" id="calculatorOptions"
+                onchange="showCalculator()">
+                <option selected>Choose Calculator</option>
+                <option value="1">Amortization</option>
+                <option value="2">Future Value</option>
+                <option value="3">CAGR</option>
+            </select>
+
+            <div class="col-12">
+                <div id="amortization" style="display:none;">
+                    <div class="card-header" style="width: 400px;text-align: center;">
+                        Amortization Calculator
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="principle" class="form-label">Principle $</label>
+                                <input type="number" class="form-control" id="p" style="width: auto;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="rate" class="form-label">Rate %</label>
+                                <input type="number" class="form-control" id="r" style="width: auto;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="numberOfyears" class="form-label">Number of years</label>
+                                <input type="number" class="form-control" id="n" style="width: auto;">
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="calculate1()">Calculate</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted" style="width: 400px;" id="finalAmount">
+                        The Amortization Value in $
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div id="futureValue" style="display:none;">
+                    <div class="card-header" style="width: 400px; text-align: center;">
+                        Future Value Calculator
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="cashFlow" class="form-label">Cash flow $</label>
+                                <input type="number" class="form-control" id="cf0" style="width: auto;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="rate" class="form-label">Rate %</label>
+                                <input type="number" class="form-control" id="R" style="width: auto;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="numberOfyears" class="form-label">Number of years</label>
+                                <input type="number" class="form-control" id="N" style="width: auto;">
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="calculate2()">Calculate</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted" style="width: 400px;" id="final_Amount">
+                        The Future Value in $
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <div id="CAGR" style="display:none;">
+                    <div class="card-header" style="width: 400px; text-align: center;">
+                        CAGR Calculator
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="beginningValue" class="form-label">Beginning Value $</label>
+                                <input type="number" class="form-control" id="beginningValue" style="width: auto;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="endingValue" class="form-label">Ending Value</label>
+                                <input type="number" class="form-control" id="endingValue" style="width: auto;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="numberOfperiod" class="form-label">Number of periods</label>
+                                <input type="number" class="form-control" id="numberOfperiod" style="width: auto;">
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="calculate3()">Calculate</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted" style="width: 400px;" id="total">
+                        The CAGR Value in $
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="finance.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,8 +1,26 @@
 body {
-  padding: 50px;
+  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+h1{
+  text-align:center;
+  background-color: mediumpurple;
+}
 a {
   color: #00B7FF;
+}
+div{
+  display:none;
+}
+button{
+  background-color:grey;
+}
+.input{
+  width: 100px;
+}
+#cardHeader{
+  text-align: center;
+}
+.card{
+  text-align: center;
 }
