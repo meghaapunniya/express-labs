@@ -40,15 +40,15 @@
                         <form>
                             <div class="mb-3">
                                 <label for="principle" class="form-label">Principle $</label>
-                                <input type="number" class="form-control" id="p" style="width: auto;">
+                                <input type="number" class="form-control" id="p" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
                             <div class="mb-3">
                                 <label for="rate" class="form-label">Rate %</label>
-                                <input type="number" class="form-control" id="r" style="width: auto;">
+                                <input type="number" class="form-control" id="r" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
                             <div class="mb-3">
                                 <label for="numberOfyears" class="form-label">Number of years</label>
-                                <input type="number" class="form-control" id="n" style="width: auto;">
+                                <input type="number" class="form-control" id="n" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
 
                             <button type="button" class="btn btn-primary" onclick="calculate1()">Calculate</button>
@@ -69,15 +69,15 @@
                         <form>
                             <div class="mb-3">
                                 <label for="cashFlow" class="form-label">Cash flow $</label>
-                                <input type="number" class="form-control" id="cf0" style="width: auto;">
+                                <input type="number" class="form-control" id="cf0" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
                             <div class="mb-3">
                                 <label for="rate" class="form-label">Rate %</label>
-                                <input type="number" class="form-control" id="R" style="width: auto;">
+                                <input type="number" class="form-control" id="R" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
                             <div class="mb-3">
                                 <label for="numberOfyears" class="form-label">Number of years</label>
-                                <input type="number" class="form-control" id="N" style="width: auto;">
+                                <input type="number" class="form-control" id="N" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
 
                             <button type="button" class="btn btn-primary" onclick="calculate2()">Calculate</button>
@@ -99,15 +99,15 @@
                         <form>
                             <div class="mb-3">
                                 <label for="beginningValue" class="form-label">Beginning Value $</label>
-                                <input type="number" class="form-control" id="beginningValue" style="width: auto;">
+                                <input type="number" class="form-control" id="beginningValue" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
                             <div class="mb-3">
                                 <label for="endingValue" class="form-label">Ending Value</label>
-                                <input type="number" class="form-control" id="endingValue" style="width: auto;">
+                                <input type="number" class="form-control" id="endingValue" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
                             <div class="mb-3">
                                 <label for="numberOfperiod" class="form-label">Number of periods</label>
-                                <input type="number" class="form-control" id="numberOfperiod" style="width: auto;">
+                                <input type="number" class="form-control" id="numberOfperiod" onkeypress="return event.charCode >= 46"style="width: auto;">
                             </div>
 
                             <button type="button" class="btn btn-primary" onclick="calculate3()">Calculate</button>
